@@ -1,8 +1,25 @@
 import React from "react";
 import { Typography, AppBar , Button, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Toolbar,Container } from '@material-ui/core'
 import { PhotoCamera } from "@material-ui/icons";
+import { makeStyles } from "@material-ui/core/styles";
+
+//this hook returns an object that contain our styles
+const useStyles = makeStyles(
+    (theme) => ({
+            container: {
+                 backgroundColor: theme.palette.background.paper,
+                // background: "rgb(232, 241, 250)",
+                // background: "red",
+                padding: theme.spacing(8,0,6)
+
+            }
+    })
+    
+    )
+
 
 const App = () =>{
+   const classes = useStyles();
    return (
        <>
            <CssBaseline />
@@ -15,8 +32,8 @@ const App = () =>{
                </Toolbar>
            </AppBar>
            <main>
-               <div>
-                   <Container maxWidth="sm">
+               <div className={classes.container}>
+                   <Container maxWidth="sm" style={{marginTop: '100px'}}>
                         <Typography variant="h2" align="center" color="textPrimary" gutterBottom>
                             Photo Album
                         </Typography>
@@ -33,7 +50,7 @@ const App = () =>{
                                         </Button>
                                     </Grid>
                                     <Grid item>
-                                        <Button variant="contained" color="primary">
+                                        <Button variant="outlined" color="primary">
                                                 Contact
                                         </Button>
                                     </Grid>
