@@ -79,7 +79,7 @@ const App = () =>{
                                 Footer
                         </Typography>
                         <Typography variant="subtitle1" align="center" color="textSecondary">
-                                blablablaba blabe bla
+                               Secont subtitle goes here
                         </Typography>
            </footer>
        </>
